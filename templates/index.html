@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>TextUtils.com</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TextUtils</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Welcome To TextUtils!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <form action="/result" method="post">{% csrf_token %}
+            <div class="form-outline">
+                <h2>ENTER OR PASTE THE TEXT BELOW AND SEE THE MAGIC!
+                </h2>
+                <textarea class="form-control" id="textAreaExample1" rows="4" name="text"></textarea>
+              </div>
+                <br>
+              <div class="form-check">
+                <input class="form-check-input" name="removepunc" type="checkbox" value="" id="flexCheckDefault1" >
+                <label class="form-check-label" for="flexCheckDefault" >
+                    Remove Punctuations
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" name="capitalized" type="checkbox" value="" id="flexCheckChecked2" >
+                <label class="form-check-label" for="flexCheckChecked">
+                    Uppercase
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" name="newline_rmv" type="checkbox" value="" id="flexCheckChecked3" >
+                <label class="form-check-label" for="flexCheckChecked">
+                    NewLine Remover
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" name="extraSpace_rmv" type="checkbox" value="" id="flexCheckChecked4" >
+                <label class="form-check-label" for="flexCheckChecked" >
+                    Extra Space Remove
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" name="ch_counter" type="checkbox" value="" id="flexCheckChecked5"  >
+                <label class="form-check-label" for="flexCheckChecked">
+                    Character Counter
+                </label>
+              </div>
+
+              <div class="btn">
+                <button type="submit" class="btn btn-success mt-2">Analyze Text</button>
+              </div>
+        </form>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
